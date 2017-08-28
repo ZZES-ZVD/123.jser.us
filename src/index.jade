@@ -1,7 +1,7 @@
 doctype html
 html(lang='zh')
   head
-    title 前端导航站 - 前端工程师专用的导航站
+    title 治电前端导航站 - 前端工程师专用的导航站
     meta(http-equiv='content-type', content='text/html; charset=utf-8')
     meta(name='baidu-site-verification', content='77c1c417ca4e5d0fa792494f27c99f06')
     meta(name='Keywords', content='前端工程师网站导航，前端工程师网址导航， Feder网址导航，前端导航，前端工程师导航，前端教程，优秀前端工程师聚合')
@@ -10,7 +10,7 @@ html(lang='zh')
     link(href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', type='text/css', href='style-min.css')
   body
-    a(class="ribbon", href="http://github.com/jserme/123.jser.us", target="_blank")
+    a(class="ribbon", href="https://github.com/ZZES-ZVD/ZZESFrontendSite", target="_blank")
         img(src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png", alt="Fork me on GitHub")
     .navbar.navbar-inverse
       .navbar-inner
@@ -19,17 +19,15 @@ html(lang='zh')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='./index.html') 123.jser.us
+          a.brand(href='./index.html') 治电前端导航站
           .nav-collapse.collapse
             ul.nav
               li
-                a(href='.') 前端导航站
+                a(href='#') 首页
               li
-                a(href='https://github.com/jserme/123.jser.us#readme', target='_blank') 我要补充
+                a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite#README', target='_blank') 我要补充
               li
-                a(href='http://weibo.com/ihubo', target='_blank') 微博反馈
-              li
-                a(href='javascript:;', data-toggle='feedback') 意见&反馈
+                a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite/issues', data-toggle='feedback') 意见&反馈
     .container
         each tag in keyArry
            .list-con(id="#{tag}")
@@ -41,8 +39,6 @@ html(lang='zh')
     .footer
       .container
         p  感谢各种开源项目, 一个程序猿的生活因为你们更美好！
-        p  如果你觉得对你有用，可以访问
-            a(href='http://guaidongdong.com?f=123jserus', target='_blank', title='女朋友的店') 怪东东的店 
         p  共收录工具及链接 
           span.totalCount #{info.totalCount} 个
         p  最后更新于 #{info.lastUpdateDate}
