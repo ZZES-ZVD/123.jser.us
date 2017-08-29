@@ -110,5 +110,11 @@ fs.readdir(DATAFOLDER, function(err, files) {
 });
 
 //最小化一下JS和CSS
-fs.writeFile(DSTJS, uglifyJS.minify(SRCJS).code);
-fs.writeFile(DSTCSS, cleanCSS.process(fs.readFileSync(SRCCSS, 'utf-8')));
+fs.writeFile(DSTJS, uglifyJS.minify(SRCJS).code, (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+});
+fs.writeFile(DSTCSS, cleanCSS.process(fs.readFileSync(SRCCSS, 'utf-8')), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+});

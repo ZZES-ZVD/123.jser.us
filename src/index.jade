@@ -7,35 +7,38 @@ html(lang='zh')
     meta(name='Keywords', content='前端工程师网站导航，前端工程师网址导航， Feder网址导航，前端导航，前端工程师导航，前端教程，优秀前端工程师聚合')
     meta(name='description', content='content')
     meta(name='viewport', content='width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no')
-    link(href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css", rel="stylesheet")
+    link(href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', type='text/css', href='style-min.css')
   body
     a(class="ribbon", href="https://github.com/ZZES-ZVD/ZZESFrontendSite", target="_blank")
-        img(src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png", alt="Fork me on GitHub")
+        img(src="forkme_right_red_aa0000.png", alt="Fork me on GitHub")
     .navbar.navbar-inverse
-      .navbar-inner
-        .container
-          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse',  data-target="#bs-example-navbar-collapse-1", aria-expanded="false")
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='./index.html') 治电前端导航站
-          .nav-collapse.collapse
-            ul.nav
-              li
-                a(href='#') 首页
-              li
-                a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite#README', target='_blank') 我要补充
-              li
-                a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite/issues', data-toggle='feedback') 意见&反馈
+          a.navbar-brand(href='./index.html') 治电前端导航站
+        .nav-collapse(id="bs-example-navbar-collapse-1")
+          ul.nav.navbar-nav
+             li
+               a(href='#') 首页
+             li
+               a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite#README', target='_blank') 我要补充
+             li
+               a(href='https://github.com/ZZES-ZVD/ZZESFrontendSite/issues', data-toggle='feedback') 意见&反馈
     .container
         each tag in keyArry
            .list-con(id="#{tag}")
                 .page-header
                     h1 #{tag}
-                .tags-list
+                .tags-list.linkdiv
                   each site in tags[tag]
-                     a.tag(href="#{site.url}", data-des="#{site.description}", data-index="#{site.id}", target="_blank") #{site.name} 
+                      a.tag(href="#{site.url}",data-toggle="tooltip", data-placement="top", title="#{site.description}", target="_blank") 
+                        h3 #{site.name} 
+                        span(id="description") #{site.description}
+
     .footer
       .container
         p  感谢各种开源项目, 一个程序猿的生活因为你们更美好！
@@ -44,9 +47,10 @@ html(lang='zh')
         p  最后更新于 #{info.lastUpdateDate}
            if( info.lastUpdateCount > 0 )
               | , 更新数量#{info.lastUpdateCount}
-    script(src='http://libs.baidu.com/jquery/1.8.0/jquery.js')
-    script(src='http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js')
-    script(type='text/javascript', src='app-min.js')
+        p  感谢 123.jser.us, by ZZES-ZVD
+    script(src='https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js')
+    script(src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript', src='./src/app.js')
     script(type='text/javascript').
       (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
