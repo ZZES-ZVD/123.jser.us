@@ -1,1 +1,1 @@
-{"name":"Webpack","id":30,"description":"WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些预设，打包为合适的格式以供浏览器使用。","tags":"工具","url":"https://webpack.js.org/","createAt":1504320003540}
+{"name":"DvaJS","id":30,"description":"dva 首先是一个基于 redux 和 redux-saga 的数据流方案，然后为了简化开发体验，dva 还额外内置了 react-router 和 fetch，所以也可以理解为一个轻量级的应用框架。","tags":"前端框架","url":"https://dvajs.com","createAt":1533039781024}

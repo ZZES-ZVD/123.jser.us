@@ -1,1 +1,1 @@
-{"name":"sublime text","id":26,"description":"Sublime Text:一款具有代码高亮、语法提示、自动完成且反应快速的编辑器软件,不仅具有华丽的界面,还支持插件扩展机制,用她来写代码,绝对是一种享受。","tags":"编辑器","url":"http://www.sublimetext.com/","createAt":1504319804479}
+{"name":"React","id":26,"description":"React是一个为数据提供渲染为HTML视图的开源JavaScript 库。React视图通常采用包含以自定义HTML标记规定的其他组件的组件渲染。React为程序员提供了一种子组件不能直接影响外层组件的模型，数据改变时对HTML文档的有效更新，和现代单页应用中组件之间干净的分离。","tags":"前端框架","url":"https://reactjs.org/","createAt":1533039604628}
